@@ -210,16 +210,6 @@
             max-height: 500px;
         }
         
-        /* Music Tab */
-        .song {
-            background: #f8e8ee;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
         
         .song-icon {
             font-size: 24px;
@@ -356,9 +346,6 @@
             <button class="tab active" data-tab="love-letter">
                 <span>❤️</span> Love Letter
             </button>
-            <button class="tab" data-tab="music">
-                <span>🎵</span> Music
-            </button>
             <button class="tab" data-tab="notes">
                 <span>📝</span> Notes
             </button>
@@ -377,31 +364,12 @@
                         <span>👇 Click to open</span>
                     </div>
                     <div class="letter-content">
-                        <p>My love,</p>
-                        <p>Every day with you feels like a beautiful dream that I never want to wake up from. Your smile brightens my darkest days, and your laughter is my favorite melody.</p>
-                        <p>I cherish every moment we spend together, from our silly inside jokes to our deep conversations under the stars. You've shown me what true happiness feels like, and I'm forever grateful to have you in my life.</p>
-                        <p>No matter where life takes us, always remember that my heart belongs to you.</p>
-                        <p>Forever yours,</p>
-                        <p>Me</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Music Tab -->
-            <div class="tab-content" id="music">
-                <h2>Songs that remind me of you</h2>
-                <div class="song">
-                    <div class="song-icon">🎵</div>
-                    <div class="song-info">
-                        <h4>Hiwaga</h4>
-                        <p>by Tatin DC</p>
-                    </div>
-                </div>
-                <div class="song">
-                    <div class="song-icon">🎵</div>
-                    <div class="song-info">
-                        <h4>Wish</h4>
-                        <p>by 16</p>
+                        <p>Sayangku,</p>
+                        <p>Setiap hari bersamamu terasa seperti mimpi indah yang tak pernah ingin aku akhiri. Senyummu menerangi hari-hariku yang paling gelap, dan tawamu adalah melodi favoritku.</p>
+                        <p>Aku sangat menghargai setiap momen yang kita lalui bersama — dari candaan kecil kita yang konyol sampai percakapan mendalam di bawah bintang-bintang. Kamu telah menunjukkan padaku seperti apa kebahagiaan sejati itu, dan aku akan selalu bersyukur karena memilikimu dalam hidupku.</p>
+                        <p>Tak peduli ke mana kehidupan membawa kita nanti, selalu ingat bahwa hatiku hanya milikmu.</p>
+                        <p>Selamanya milikmu,</p>
+                        <p>Aku</p>
                     </div>
                 </div>
             </div>
@@ -425,22 +393,22 @@
                 <h2>Flowers for you</h2>
                 <div class="gallery">
                     <div class="gallery-item">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1eaad721-3375-4d97-a5fa-cbf8a87d60b8.png" alt="Bouquet of delicate pink roses with soft green leaves">
+                        <img src="1111.jpg" alt="I LOVE YOU">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/73632299-5dde-4ded-805a-88a7dcb4b5e4.png" alt="Beautiful pink tulips in a glass vase with morning dew">
+                        <img src="2222.jpg" alt="I LOVE YOU">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e9890063-b481-46f6-97a1-9fc753211e19.png" alt="Fluffy pink peony flowers with lush foliage">
+                        <img src="3333.jpg" alt="I LOVE YOU">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4bc3dffd-4971-4223-b7e4-3699d2b97bbe.png" alt="Branch of pink cherry blossoms against a blue sky">
+                        <img src="4444.jpg" alt="I LOVE YOU">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d0daff3c-1751-492b-9b74-de28ac48d384.png" alt="Cluster of light pink carnations with delicate petals">
+                        <img src="5555.jpg" alt="I LOVE YOU">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/51f3ca74-2471-403f-bb99-751536acd7d9.png" alt="Vibrant pink azalea flowers covering a garden bush">
+                        <img src="6666.jpg" alt="I LOVE YOU">
                     </div>
                 </div>
             </div>
@@ -464,30 +432,39 @@
             const submitPassword = document.getElementById('submitPassword');
             
             submitPassword.addEventListener('click', function() {
-                if (passwordInput.value.toLowerCase() === 'babycakes') {
-                    passwordModal.style.opacity = '0';
-                    setTimeout(() => {
-                        passwordModal.style.display = 'none';
-                        welcomeScreen.style.display = 'flex';
-                        
-                        setTimeout(() => {
-                            welcomeScreen.style.opacity = '0';
-                            setTimeout(() => {
-                                welcomeScreen.style.display = 'none';
-                                mainContent.style.display = 'block';
-                            }, 800);
-                        }, 2500);
-                    }, 500);
-                } else {
-                    passwordInput.value = '';
-                    passwordInput.placeholder = 'Try again, my love...';
-                    passwordInput.style.borderColor = '#ff4d4d';
-                    setTimeout(() => {
-                        passwordInput.style.borderColor = '#ffb7c5';
-                        passwordInput.placeholder = 'Our special word...';
-                    }, 1500);
-                }
-            });
+    if (passwordInput.value.toLowerCase() === '12112025') {
+        passwordModal.style.opacity = '0';
+        setTimeout(() => {
+            passwordModal.style.display = 'none';
+            welcomeScreen.style.display = 'flex';
+
+            // ambil audio
+            const bgMusic = document.getElementById('backgroundMusic');
+
+            // tunggu 2,5 detik (selesai welcome screen)
+            setTimeout(() => {
+                welcomeScreen.style.opacity = '0';
+                setTimeout(() => {
+                    welcomeScreen.style.display = 'none';
+                    mainContent.style.display = 'block';
+
+                    // play musik setelah welcome screen selesai
+                    bgMusic.play().catch(() => {
+                        console.log("Autoplay dicegah oleh browser, klik di layar untuk mulai musik.");
+                    });
+                }, 800);
+            }, 2500);
+        }, 500);
+    } else {
+        passwordInput.value = '';
+        passwordInput.placeholder = 'Try again, my love...';
+        passwordInput.style.borderColor = '#ff4d4d';
+        setTimeout(() => {
+            passwordInput.style.borderColor = '#ffb7c5';
+            passwordInput.placeholder = 'Our special word...';
+        }, 1500);
+    }
+});
             
             // Allow Enter key to submit password
             passwordInput.addEventListener('keypress', function(e) {
@@ -549,6 +526,9 @@
             
             addFloatingElements();
         });
+        
     </script>
+
+    <audio id="backgroundMusic" src="Blue.mp3" loop></audio>
 </body>
 </html>
